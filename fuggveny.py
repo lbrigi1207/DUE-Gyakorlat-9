@@ -1,7 +1,8 @@
-import random
 import string
+import random
 
 jelszo_globalis = ''
+
 
 def jelszogenerator(jelszohossz, kell_szamjegy, kell_irasjel):
     jelszo = ''
@@ -14,6 +15,7 @@ def jelszogenerator(jelszohossz, kell_szamjegy, kell_irasjel):
     for _ in range(jelszohossz):
         jelszo = jelszo + karakterlista[random.randint(0, len(karakterlista)-1)]
     return jelszo
+
 
 if __name__ == '__main__':
     print(jelszo_globalis)

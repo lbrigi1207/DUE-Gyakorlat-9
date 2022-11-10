@@ -1,8 +1,3 @@
-#JELSZÓGENERÁTOR
-#Véletlenszerűen geenrálunk jelszót
-#meghatározott hosszúságú legyen
-#először betük, aztán számjegyek, és írásjelek
-
 # jelszógenerátor
 from fuggveny import *
 
