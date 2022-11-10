@@ -24,12 +24,13 @@ class Jelszoobjektum():
             karakter_lista += string.punctuation
 
         for _ in range(self.jelszohossz):
-            karakter = karakter_lista[random.randint(0, len(karakter_lista) - 1)]
-            self.jelszo += karakter
+            self.jelszo = self.jelszo + karakter_lista[random.randint(0, len(karakter_lista) - 1)]
+
+#class Felhasznalo(Jelszoobjektum):
 
 if __name__ == '__main__':
     pwd = Jelszoobjektum()
-    pwd.jelszohossz = 15
+    #pwd.jelszohossz = 15
     pwd.kell_irasjel = True
     pwd.jelszogenerator()
 

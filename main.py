@@ -3,31 +3,33 @@
 #meghatározott hosszúságú legyen
 #először betük, aztán számjegyek, és írásjelek
 
-'''import fuggveny
-print(fuggveny.jelszogenerator(8, True, True))
+# jelszógenerátor
+from fuggveny import *
 
-import objektum
-
-p = objektum.Jelszoobjektum()
-print(p.jelszogenerator())
-'''
+print(jelszogenerator(15, True, True))
 
 from tkinter import *
 import fuggveny
+import objektum
+
 
 def jelszokiiras():
-    jelszo_cimke.pack()
+    jelszo_ertek.pack()
+
+p = objektum.Jelszoobjektum()
+p.jelszogenerator()
+print(p.jelszo)
+
 
 ablak = Tk()
 ablak.title('Jelszógenerálás')
-ablak.minsize(300, 200)
-cimke = Label(ablak, text='Jelszó: ', fg='red')
-jelszo_cimke = Label(ablak, text=fuggveny.jelszogenerator(10, True, True))
-ok_gomb = Button(ablak, text='OK', command=ablak.destroy)
-jelszo_gomb = Button(ablak, text='Jelszógenerálás', command=jelszokiiras())
+ablak.minsize(width=200, height=100)
+jelszo_cimke = Label(ablak, text='A jelszó: ', fg='red')
+jelszo_ertek = Label(ablak, text=fuggveny.jelszogenerator(15, True, False))
+lezaro_gomb = Button(ablak, text='Lezárás', command=ablak.destroy)
+jelszo_gomb = Button(ablak, text='Generálás', command=jelszokiiras)
 
-cimke.pack()
-ok_gomb.pack()
+jelszo_cimke.pack()
 jelszo_gomb.pack()
-
+lezaro_gomb.pack()
 mainloop()

@@ -1,18 +1,19 @@
 import random
 import string
 
-def jelszogenerator(jelszohossz, kell_szamjegy, kell_irasjel ): #paraméterként használva
+jelszo_globalis = ''
+
+def jelszogenerator(jelszohossz, kell_szamjegy, kell_irasjel):
     jelszo = ''
-    karakter_lista = string.ascii_letters
+    karakterlista = string.ascii_letters
     if kell_szamjegy:
-        karakter_lista += string.digits
-
+        karakterlista = karakterlista + string.digits
     if kell_irasjel:
-        karakter_lista += string.punctuation
+        karakterlista = karakterlista + string.punctuation
 
-    for _ in range(jelszohossz):  # _ = i
-        karakter = karakter_lista[random.randint(0, len(karakter_lista) - 1)]
-        jelszo += karakter
+    for _ in range(jelszohossz):
+        jelszo = jelszo + karakterlista[random.randint(0, len(karakterlista)-1)]
     return jelszo
 
-#if __name__ == '__main__':
+if __name__ == '__main__':
+    print(jelszo_globalis)
